@@ -71,7 +71,14 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
+      <Flex
+      direction="row" 
+      justifyContent="space-between"
+      margin="10px">
       <Heading level={1}>My Notes App</Heading>
+      <Button onClick={signOut}>Sign Out</Button>
+      </Flex>
+      
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
@@ -90,29 +97,30 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-           <View
-  name="image"
-  as="input"
-  type="file"
-  style={{ alignSelf: "end" }}
-/>
           <Button type="submit" variation="primary">
             Create Note
           </Button>
         </Flex>
+        <View
+  name="image"
+  as="input"
+  type="file"
+  style={{ alignSelf: "end",margin:30 }}
+/>
       </View>
      
       <Heading level={2}>Current Notes</Heading>
       <View 
       backgroundColor="whitesmoke"
-      border="1px solid"
+      
       margin="3rem 0">
       {notes.map((note) => (
   <Flex
     key={note.id || note.name}
-    direction="column"
+    direction="row"
     justifyContent="center"
     alignItems="center"
+    border="1px solid"
   >
     <Text as="strong" fontWeight={700}>
       {note.name}
@@ -131,7 +139,7 @@ const App = ({ signOut }) => {
   </Flex>
 ))}
       </View>
-      <Button onClick={signOut}>Sign Out</Button>
+      
     </View>
   );
 };
