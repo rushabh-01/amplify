@@ -104,6 +104,7 @@ const App = ({ signOut }) => {
      
       <Heading level={2}>Current Notes</Heading>
       <View 
+      backgroundColor="whitesmoke"
       border="1px solid"
       margin="3rem 0">
       {notes.map((note) => (
