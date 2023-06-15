@@ -1,0 +1,14 @@
+{
+  "resourceName": "fsrBucket1",
+  "policyUUID": "84c96366",
+  "bucketName": "amplifyc8541e6d6d4343fd87bb3880c9c37909",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
